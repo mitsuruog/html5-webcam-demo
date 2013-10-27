@@ -1,0 +1,27 @@
+extends layout
+
+block custom_style
+    style
+
+        .overlay {
+            position: relative;
+            left: -400px;;
+        }
+
+        .overlay {
+            z-index: 10003;
+        }
+
+block content
+    h2#stats 顔特徴認識
+    video#video(width="400", height="300", autoplay, loop)
+    canvas#overlay.overlay(width="400", height="300")
+
+    div
+        p#message
+
+block custom_script
+    script(src='/assets/js/clmtrackr/clmtrackr.js')
+    script(src='/assets/js/clmtrackr/model_pca_20_mosse.js')
+    script(src='/assets/js/stats/stats.min.js')
+    script(src='/javascripts/face.js')

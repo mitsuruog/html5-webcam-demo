@@ -1,0 +1,39 @@
+extends layout
+
+block custom_style
+    style
+        .hide {
+            display: none;
+        }
+
+        .overlay, .debug {
+            position: relative;
+            left: -320px;;
+        }
+
+        .debug {
+            z-index: 10005;
+        }
+
+        .overlay {
+            z-index: 10003;
+        }
+
+block content
+    h2#stats 顔認識
+    video#video.videoScreen(autoplay, loop)
+    canvas#compare.compare.hide(width="320", height="240")
+    canvas#overlay.overlay(width="320", height="240")
+    canvas#debug.debug.hide(width="320", height="240")
+
+    div
+        p#message
+        p ステータス：
+            span#status
+    div
+        button#debugToggle 確立分布マップを表示
+
+block custom_script
+    script(src='/assets/js//headtrackr/headtrackr.js')
+    script(src='/assets/js/stats/stats.min.js')
+    script(src='/javascripts/head.js')

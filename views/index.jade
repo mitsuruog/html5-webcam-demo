@@ -1,0 +1,21 @@
+extends layout
+
+block custom_style
+    style
+        li {
+            line-height: 27px;
+        }
+
+block content
+  h2 HTML5 StreamAPI とWebcamを使ったデモ
+  ui
+    li
+      a(href="bare") Videoサンプル
+    li
+      a(href="stream") Videoストリーミング（Websocket）
+    li
+      a(href="head") 顔認識
+    li
+      a(href="face") 顔特徴認識
+    li
+      a(href="webgl") WebGLと顔認識を絡めて

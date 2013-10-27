@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h2 Videoストリーミング（Websocket）
+    video#video.videoScreen(autoplay, loop)
+    canvas#inputStream.inputStream.videoScreen
+    canvas#outputStream.outputStream.videoScreen
+
+block custom_script
+    script(src='/assets/js/binaryjs/binary.js')
+    script(src='/javascripts/binaryr.js')
+    script(src='/javascripts/stream.js')

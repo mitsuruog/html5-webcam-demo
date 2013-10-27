@@ -1,0 +1,19 @@
+body {
+  padding: 57px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+
+.inputStream {
+  display: none;
+}
+
+.videoScreen {
+  width: 320px;
+  height: 240px;
+}

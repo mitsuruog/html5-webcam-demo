@@ -1,0 +1,35 @@
+extends layout
+
+block custom_style
+    style
+        body {
+            background: no-repeat url('images/space.jpg') center center fixed;
+            background-size: cover;
+            color: #FFF;
+        }
+
+        video {
+            z-index: 10000;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .webgl {
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+
+block content
+    h2#stats WebGLと顔認識を絡めて
+    video#video.videoScreen(autoplay, loop)
+    canvas#compare.compare.hide(width="320", height="240")
+
+block custom_script
+    script(src='/assets/js/headtrackr/headtrackr.js')
+    script(src='/assets/js/tree/three.js')
+    script(src='/assets/js/tree/Detector.js')
+    script(src='/assets/js/stats/stats.min.js')
+    script(src='/javascripts/webgl.js')
