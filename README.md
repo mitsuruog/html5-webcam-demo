@@ -6,6 +6,14 @@ html5-webcam-demo
 http://atnd.org/events/44402
 
 
+### デモの内容
+
+* 単純なVideoサンプル
+* WebsocketによるVideoストリーミング
+* 顔認識
+* 顔特徴認識
+* 顔認識とWebGLを組み合わせたもの
+
 ### 動かし方
 
 ````
